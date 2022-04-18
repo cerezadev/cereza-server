@@ -23,7 +23,5 @@ COPY --from=builder /cereza-server/node_modules ./node_modules
 COPY --from=builder /cereza-server/build ./build
 COPY --from=builder /cereza-server/package.json ./package.json
 
-ENV PORT 5000
-
-EXPOSE $PORT
-CMD node build/index.js $PORT
+EXPOSE 5000
+CMD node build/index.js 5000
